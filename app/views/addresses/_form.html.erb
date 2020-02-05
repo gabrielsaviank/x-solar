@@ -1,0 +1,62 @@
+<%= form_for(address) do |f| %>
+  <% if address.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(address.errors.count, "error") %> prohibited this address from being saved:</h2>
+
+      <ul>
+      <% address.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :ziptwo %>
+    <%= f.text_field :ziptwo %>
+  </div>
+
+  <div class="field">
+    <%= f.label :citytwo %>
+    <%= f.text_field :citytwo %>
+  </div>
+
+  <div class="field">
+    <%= f.label :statetwo %>
+    <%= f.text_field :statetwo %>
+  </div>
+
+  <div class="field">
+    <%= f.label :boroughtwo %>
+    <%= f.text_field :boroughtwo %>
+  </div>
+
+  <div class="field">
+    <%= f.label :streettwo %>
+    <%= f.text_field :streettwo %>
+  </div>
+
+  <div class="field">
+    <%= f.label :numbertwo %>
+    <%= f.text_field :numbertwo %>
+  </div>
+
+  <div class="field">
+    <%= f.label :comptwo %>
+    <%= f.text_field :comptwo %>
+  </div>
+
+  <div class="field">
+    <%= f.label :typetwo %>
+    <%= f.text_field :typetwo %>
+  </div>
+
+  <div class="field">
+    <%= f.label :customer_id %>
+    <%= f.text_field :customer_id %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
